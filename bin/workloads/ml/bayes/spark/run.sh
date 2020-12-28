@@ -26,7 +26,7 @@ rmr_hdfs $OUTPUT_HDFS || true
 
 SIZE=`dir_size $INPUT_HDFS`
 START_TIME=`timestamp`
-run_spark_job org.apache.spark.examples.mllib.SparseNaiveBayes ${INPUT_HDFS}
+run_spark_job org.apache.spark.examples.mllib.SparseNaiveBayes ${INPUT_HDFS} 2>&1 | tee bayes_log.txt 
 END_TIME=`timestamp`
 
 gen_report ${START_TIME} ${END_TIME} ${SIZE}
