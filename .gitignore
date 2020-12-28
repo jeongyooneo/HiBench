@@ -1,4 +1,5 @@
 target/
+*log.txt
 *.iml
 .idea/
 .idea_modules/
@@ -16,7 +17,3 @@ report/
 .settings/
 conf/benchmarks.lst
 conf/frameworks.lst
-conf/hibench.conf
-conf/hadoop.conf
-conf/spark.conf
-*.conf
